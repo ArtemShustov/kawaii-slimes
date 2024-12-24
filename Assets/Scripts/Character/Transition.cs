@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Character {
 	[Serializable]
-	public class Transition {
+	public class Transition: AbstractTransition {
 		private CharacterState _state;
 		private CharacterStateMachine _character;
 
@@ -14,13 +14,19 @@ namespace Game.Character {
 			_character = character;
 			_state = state;
 		}
-		
+
 		protected void DoTransit() {
 			_character.Change(_state);
 		}
-		
-		public virtual void StartTracking() {}
-		public virtual bool Check() => false;
-		public virtual void StopTracking() {}
+
+		public override void StartTracking() { }
+		public override bool Check() => false;
+		public override void StopTracking() { }
+	}
+
+	public abstract class AbstractTransition {
+		public abstract void StartTracking();
+		public abstract bool Check();
+		public abstract void StopTracking();
 	}
 }

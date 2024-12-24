@@ -17,7 +17,7 @@ namespace Game.Character {
 			SetHealth(_max);
 		}
 
-		public void TakeDamage(GameObject from, int damage) {
+		public void TakeDamage(AbstractCharacter from, int damage) {
 			SetHealth(_current -= damage);
 			Damaged?.Invoke(from, damage);
 		}
@@ -26,6 +26,6 @@ namespace Game.Character {
 			Changed?.Invoke(_current);
 		}
 		
-		public delegate void DamagedEvent(GameObject from, int damage);
+		public delegate void DamagedEvent(AbstractCharacter from, int damage);
 	}
 }

@@ -24,7 +24,7 @@ namespace Game.Character.States {
 			base.SetCharacter(character);
 			_transition.Init(character, this);
 		}
-		public override Transition GetDefaultTransition() {
+		public override AbstractTransition GetDefaultTransition() {
 			return _transition;
 		}
 

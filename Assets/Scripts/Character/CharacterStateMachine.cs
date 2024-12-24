@@ -17,7 +17,6 @@ namespace Game.Character {
 		}
 
 		public void Change(CharacterState state) {
-			// Debug.Log($"State changing: '{_currentState?.GetType().Name ?? "null"}' -> '{state.GetType().Name}'");
 			if (!state) {
 				Debug.LogWarning("Trying to change state to null");
 				return;
@@ -29,18 +28,6 @@ namespace Game.Character {
 
 		public void SetAnimator(CharacterAnimator animator) {
 			_animator = animator;
-		}
-
-		private void OnGUI() {
-			var style = new GUIStyle();
-			style.alignment = TextAnchor.UpperCenter;
-			style.fontSize = 36;
-			
-			var screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-			if (screenPosition.z > 0) {
-				var rect = new Rect(screenPosition.x, Screen.height - screenPosition.y, 0, 0);
-				GUI.Label(rect, $"State: {_currentState?.GetType().Name}", style);
-			}
 		}
 	}
 }

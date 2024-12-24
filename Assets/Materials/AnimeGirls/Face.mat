@@ -226,7 +226,7 @@ Material:
     - _OcclusionStrength: 1
     - _OptionsTab: 1
     - _Outline: 1
-    - _OutlineClipOffset: 0
+    - _OutlineClipOffset: 0.1
     - _OutlineData: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25

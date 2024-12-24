@@ -1,8 +1,7 @@
 using Game.Character;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Game {
+namespace Game.Effects {
 	public class FootStepSounds: MonoBehaviour {
 		[Range(0f, 1f)]
 		[SerializeField] private float _defaultPitch = 1;
