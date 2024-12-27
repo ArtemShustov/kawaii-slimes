@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7632709646819008250}
-  - component: {fileID: 2409914464898464929}
-  - component: {fileID: 872989405383891850}
-  - component: {fileID: 299683803261974724}
-  - component: {fileID: 7342528624853308070}
+  - component: {fileID: 1775513155590764821}
+  - component: {fileID: 6402283512514051469}
+  - component: {fileID: 1515269443808530339}
+  - component: {fileID: 8839192127868196261}
   m_Layer: 0
   m_Name: States
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6487889335743263875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2409914464898464929
+--- !u!114 &1775513155590764821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +44,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1673732482865632993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ee4fa6c86c42ee9d5636e31f336d9f, type: 3}
+  m_Script: {fileID: 11500000, guid: e9d10f47173d494ab0a373cab84657ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkingState: {fileID: 872989405383891850}
-  _transitions:
+  _incoming:
+    _idleState: {fileID: 1775513155590764821}
+  _outgoing:
     _states:
-    - {fileID: 299683803261974724}
---- !u!114 &872989405383891850
+    - {fileID: 1515269443808530339}
+    - {fileID: 6402283512514051469}
+--- !u!114 &6402283512514051469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,15 +62,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1673732482865632993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c67ad56b9ec4999a2e7c96c8d3feaa2, type: 3}
+  m_Script: {fileID: 11500000, guid: 170fda1238ad41398e938f69af9ee6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rotateSpeed: 10
-  _idleState: {fileID: 2409914464898464929}
-  _transitions:
+  _isWalking: IsWalking
+  _incoming:
+    _walkState: {fileID: 6402283512514051469}
+  _outgoing:
     _states:
-    - {fileID: 299683803261974724}
---- !u!114 &299683803261974724
+    - {fileID: 1515269443808530339}
+    - {fileID: 1775513155590764821}
+--- !u!114 &1515269443808530339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,16 +82,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1673732482865632993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81aaaac7f2b645a18aee897d24dc3706, type: 3}
+  m_Script: {fileID: 11500000, guid: cf4347ad5807408a94d0ff43348e1d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: 1.5
-  _nextState: {fileID: 2409914464898464929}
-  _diedState: {fileID: 7342528624853308070}
+  _damagedTrigger: Damaged
+  _time: 1
   _health: {fileID: 5400170625604230259}
-  _transition:
+  _died: {fileID: 8839192127868196261}
+  _next: {fileID: 1775513155590764821}
+  _incoming:
+    _damagedState: {fileID: 1515269443808530339}
     _health: {fileID: 5400170625604230259}
---- !u!114 &7342528624853308070
+--- !u!114 &8839192127868196261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +102,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1673732482865632993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824f1c5864e84e5c84f65d26701197cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 352ab70da79f4e6a8ecbba14eb6eddaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _effect: {fileID: 11400000, guid: 34851a0c14724e6448f1fbffea6555b7, type: 2}
-  _destroyDelay: 0
 --- !u!1 &2782557117695596227
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 2132259317420937232}
-  _defaultState: {fileID: 2409914464898464929}
+  _defaultState: {fileID: 1775513155590764821}
   _statesRoot: {fileID: 7632709646819008250}
 --- !u!114 &2132259317420937232
 MonoBehaviour:

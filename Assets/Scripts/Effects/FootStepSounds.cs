@@ -1,4 +1,4 @@
-using Game.Character;
+using Core.Character;
 using UnityEngine;
 
 namespace Game.Effects {

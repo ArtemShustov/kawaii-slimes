@@ -1,4 +1,4 @@
-using Game.Character;
+using Core.Character.Properties;
 using UnityEngine;
 
 namespace Game.UI {

@@ -1,4 +1,4 @@
-using Game.Events;
+using Core.Events;
 using Game.Slimes;
 using UnityEngine;
 

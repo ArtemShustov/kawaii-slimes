@@ -15,7 +15,9 @@ namespace Game.Accessories {
 			return _item;
 		}
 		public void Clear() {
-			Destroy(_item.gameObject);
+			if (_item) {
+				Destroy(_item);
+			}
 		}
 	}
 }

@@ -62,8 +62,8 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: OnArmCallback
+      - time: 1
+        functionName: OnAnimationEndedCallback
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

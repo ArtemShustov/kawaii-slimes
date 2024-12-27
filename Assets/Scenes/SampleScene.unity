@@ -974,121 +974,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671154761}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &781714760 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3575905377512842987, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
-  m_PrefabInstance: {fileID: 1098225597}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &781714763 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7309476336274084945, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
-  m_PrefabInstance: {fileID: 1098225597}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &781714767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781714760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244f9b56c2504305b250f770780c718f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button:
-    m_Name: Button
-    m_Type: 1
-    m_ExpectedControlType: 
-    m_Id: d6bfca5a-18eb-4dea-a1fd-03583df4ebd3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: bdd3a8be-6b86-490b-9630-8a8c51ed5cd0
-      m_Path: <Gamepad>/buttonNorth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Button
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 91b5fb9b-5d05-4924-a4a5-7c456ebd48b2
-      m_Path: <Keyboard>/t
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Button
-      m_Flags: 0
-    m_Flags: 0
-  _animator: {fileID: 781714763}
---- !u!1001 &821346264
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1098225598}
-    m_Modifications:
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8040994826366151712, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-      propertyPath: m_Name
-      value: KatanaWeapon
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
---- !u!1 &821346265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8040994826366151712, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-  m_PrefabInstance: {fileID: 821346264}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &821346266 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6077871557547128654, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
-  m_PrefabInstance: {fileID: 821346264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,20 +1339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8885897717786524451, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
-      propertyPath: _weapon
-      value: 
-      objectReference: {fileID: 821346265}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1041775626251673083, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 821346266}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3575905377512842987, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 781714767}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d0f1c2f18f1984da9565418f24ea44, type: 3}
 --- !u!4 &1098225598 stripped
 Transform:
