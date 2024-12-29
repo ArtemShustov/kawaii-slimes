@@ -391,8 +391,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraTarget: {fileID: 2645516100282096194}
+  _input: {fileID: 4205557027512406189}
   _hatSlot: {fileID: 0}
-  _weaponSlot: {fileID: 0}
+  _weaponSlot: {fileID: 483329301985427423}
 --- !u!114 &6854079894947973165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +572,7 @@ MonoBehaviour:
   _swordArea: {fileID: 1810369061334485913}
   _hand: {fileID: 331040627455982502}
   _weapon:
-    _item: {fileID: 11400000, guid: 96e497bf24fff804198f115b198239f4, type: 2}
+    _item: {fileID: 0}
     _damageModifier: 1
 --- !u!114 &7285998447491275797
 MonoBehaviour:

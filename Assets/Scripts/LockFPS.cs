@@ -6,8 +6,6 @@ namespace Game {
 
 		private void Awake() {
 			Application.targetFrameRate = _targetFrameRate;
-			Cursor.visible = false;
-			Cursor.lockState = CursorLockMode.Locked;
 		}
 	}
 }

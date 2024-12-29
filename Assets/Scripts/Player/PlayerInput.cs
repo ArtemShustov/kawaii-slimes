@@ -1,9 +1,8 @@
-using System;
 using Core.Character;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Game {
+namespace Game.Player {
 	public class PlayerInput: MonoBehaviour {
 		[SerializeField] private InputAction _move = new InputAction(
 			name: "Move", 
@@ -21,6 +20,10 @@ namespace Game {
 			_input.Move = _move.ReadValue<Vector2>().normalized;
 		}
 
+		private void ClearInput() {
+			_input.Move = Vector2.zero;
+		}
+		
 		private void OnAttack(InputAction.CallbackContext obj) {
 			_input.InvokeAttack();
 		}
@@ -33,6 +36,7 @@ namespace Game {
 			_move.Disable();
 			_attack.Disable();
 			_attack.performed -= OnAttack;
+			ClearInput();
 		}
 	}
 }

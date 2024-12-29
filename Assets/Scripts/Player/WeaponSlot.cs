@@ -13,6 +13,8 @@ namespace Game.Player {
 		[SerializeField] private WeaponStack _weapon;
 
 		private bool _isShowed;
+
+		public event Action WeaponChanged;
 		
 		public bool HasWeapon => _weapon != null && _weapon.Item != null;
 		public WeaponStack Weapon => _weapon;
@@ -26,6 +28,7 @@ namespace Game.Player {
 			if (HasWeapon) {
 				_swordArea.SetDamage(_weapon.GetDamage());
 			}
+			WeaponChanged?.Invoke();
 		}
 
 		public void Hide() {
