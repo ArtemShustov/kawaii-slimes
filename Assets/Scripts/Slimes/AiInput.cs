@@ -3,13 +3,10 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-namespace Game {
+namespace Game.Slimes {
 	public class AiInput: MonoBehaviour {
 		[SerializeField] private CharacterInput _input;
 		[SerializeField] private NavMeshAgent _agent;
-		[Space]
-		[SerializeField] public Texture2D _targetIcon;
-		[SerializeField] public Vector2 _iconSize = new Vector2(32, 32);
 		
 		private void Start() {
 			_agent.updatePosition = false;
@@ -31,26 +28,6 @@ namespace Game {
 			_input.Move = new Vector2(direction.x, direction.z).normalized;
 			
 			_agent.nextPosition = transform.position;
-		}
-
-		private void OnGUI() {
-			if (_agent != null && _agent.hasPath) {
-				Vector3 targetPosition = _agent.destination;
-				Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetPosition);
-				
-				if (screenPosition.z > 0) {
-					screenPosition.y = Screen.height - screenPosition.y;
-					
-					Rect iconRect = new Rect(
-						screenPosition.x - _iconSize.x / 2,
-						screenPosition.y - _iconSize.y / 2,
-						_iconSize.x,
-						_iconSize.y
-					);
-					
-					GUI.DrawTexture(iconRect, _targetIcon);
-				}
-			}
 		}
 	}
 }
