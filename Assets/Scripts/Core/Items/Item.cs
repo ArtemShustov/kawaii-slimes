@@ -2,12 +2,15 @@ using UnityEngine;
 
 namespace Core.Items {
 	public abstract class Item: ScriptableObject {
+		[SerializeField] private string _name;
+		[TextArea]
+		[SerializeField] private string _description;
 		[SerializeField] private Sprite _icon;
 		
 		public Sprite Icon => _icon;
+		public string Name => _name;
+		public string Description => _description;
 
-		public virtual AbstractItemStack GetStack() {
-			return new CountableItemStack(this);
-		}
+		public abstract AbstractItemStack GetStack();
 	}
 }

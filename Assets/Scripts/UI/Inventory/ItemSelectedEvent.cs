@@ -1,4 +1,5 @@
 using Core.Events;
+using Game.UI.Inventory.StackView;
 
 namespace Game.UI.Inventory {
 	public class ItemSelectedEvent: IGameEvent {

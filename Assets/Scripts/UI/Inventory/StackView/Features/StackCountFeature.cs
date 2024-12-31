@@ -2,7 +2,7 @@ using Core.Items;
 using TMPro;
 using UnityEngine;
 
-namespace Game.UI.Inventory.StackViewFeatures {
+namespace Game.UI.Inventory.StackView.Features {
 	public class StackCountFeature: ItemStackViewFeature {
 		[SerializeField] private TMP_Text _label;
 		

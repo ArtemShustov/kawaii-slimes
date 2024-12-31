@@ -1,6 +1,4 @@
 using System;
-using Game.UI;
-using Game.UI.Inventory;
 using UnityEngine;
 
 namespace Game.GameFlow.States {

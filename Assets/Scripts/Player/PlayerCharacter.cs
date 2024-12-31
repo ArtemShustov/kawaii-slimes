@@ -1,6 +1,4 @@
 using Core.Character;
-using Game.Accessories;
-using Game.Items;
 using UnityEngine;
 
 namespace Game.Player {
@@ -8,11 +6,11 @@ namespace Game.Player {
 		[SerializeField] private Transform _cameraTarget;
 		[Header("Components")]
 		[SerializeField] private PlayerInput _input;
-		[Header("Accessories")]
-		[SerializeField] private HatSlot _hatSlot;
+		[Header("Slots")]
 		[SerializeField] private WeaponSlot _weaponSlot;
 
 		public Transform CameraTarget => _cameraTarget;
+		public WeaponSlot WeaponSlot => _weaponSlot;
 
 		public void SetInputActive(bool isActive) {
 			_input.enabled = isActive;

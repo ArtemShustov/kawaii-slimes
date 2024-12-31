@@ -1,9 +1,10 @@
 using System;
 using Core.Items;
+using Game.UI.Inventory.StackView;
 using UnityEngine;
 
 namespace Game.UI.Inventory {
-	public class InventoryView: MonoBehaviour {
+	public class InventoryView: PlayerInventoryComponent {
 		[Header("Settings")]
 		[SerializeField] private bool _showOnEnable = true;
 		[SerializeField] private ItemStackView _stackViewPrefab;
@@ -25,7 +26,7 @@ namespace Game.UI.Inventory {
 			foreach (var stack in _inventory.Items) {
 				if (filter.Invoke(stack)) {
 					var instance = Instantiate(_stackViewPrefab, _container);
-					instance.Bind(stack);
+					instance.SetStack(stack);
 				}
 			}
 		}
@@ -35,11 +36,9 @@ namespace Game.UI.Inventory {
 			}
 		}
 
-		public void SetInventory(Core.Items.Inventory inventory) {
-			_inventory = inventory;
-			if (enabled) {
-				Show();
-			}
+		public override void Bind(PlayerInventoryViewModel viewModel) {
+			base.Bind(viewModel);
+			_inventory = viewModel.Inventory;
 		}
 
 		private void OnEnable() {

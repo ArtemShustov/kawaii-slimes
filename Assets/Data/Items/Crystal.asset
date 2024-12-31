@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ac3fbe69a04d2bbd905261fbaa3585, type: 3}
   m_Name: Crystal
   m_EditorClassIdentifier: 
+  _name: Crystal
+  _description: The common currency of this world.
   _icon: {fileID: 21300000, guid: 119f93d0bcbf1e743bf5fcf237507d39, type: 3}

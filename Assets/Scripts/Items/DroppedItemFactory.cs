@@ -1,14 +1,22 @@
+using Core.Events;
 using Core.Items;
 using UnityEngine;
 
 namespace Game.Items {
-	[CreateAssetMenu(menuName = "Factories/Dropped item")]
-	public class DroppedItemFactory: ScriptableObject {
+	public class DroppedItemFactory: MonoBehaviour {
+		[Header("Settings")]
+		[SerializeField] private bool _randomRotation = true;
+		[Header("Components")]
 		[SerializeField] private DroppedItem _defaultPrefab;
+		[SerializeField] private Transform _root;
 
-		public DroppedItem Spawn(Transform root, AbstractItemStack stack) {
+		public DroppedItem Spawn(AbstractItemStack stack, Vector3 position) {
 			var prefab = GetPrefab(stack);
-			var instance = Instantiate(prefab, root);
+			var instance = Instantiate(prefab, _root);
+			instance.transform.position = position;
+			if (_randomRotation) {
+				instance.transform.rotation = Random.rotation;
+			}
 			instance.SetStack(stack);
 			ApplyCustomData(instance);
 			return instance;
@@ -23,6 +31,16 @@ namespace Game.Items {
 				}
 			}
 			return _defaultPrefab;
+		}
+
+		private void OnItemDropped(ItemDroppedEvent gameEvent) {
+			Spawn(gameEvent.Stack, gameEvent.Position);
+		}
+		private void OnEnable() {
+			EventBus<ItemDroppedEvent>.Event += OnItemDropped;
+		}
+		private void OnDisable() {
+			EventBus<ItemDroppedEvent>.Event -= OnItemDropped;
 		}
 	}
 }
