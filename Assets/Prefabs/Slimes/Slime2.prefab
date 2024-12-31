@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _max
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5549367230527076559, guid: fcba64c60246d6248851e97125f80579, type: 3}
+      propertyPath: _count
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5994638078902902606, guid: fcba64c60246d6248851e97125f80579, type: 3}
       propertyPath: m_Name
       value: Slime2

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3544d502293c4434a1bf18dec76c0973, type: 3}
+  m_Name: PartyHat
+  m_EditorClassIdentifier: 
+  _icon: {fileID: 21300000, guid: ee8ce5cd9c0883f4182b5cfd43cfd7fe, type: 3}
+  _itemStackView: {fileID: 2402599427992749199, guid: 7da6b7ec764950246a138f9e3c9e4e04, type: 3}
+  _prefab: {fileID: 257226785423823269, guid: ecbbbd1d7f54b00468bcbb631523c067, type: 3}

@@ -1,14 +1,27 @@
 using System;
+using Core.Items;
 using UnityEngine;
 
 namespace Game.Items {
 	[Serializable]
 	public class WeaponStack: ItemStack<Weapon> {
-		[SerializeField] private float _damageModifier = 1.0f;
-		public float DamageModifier => _damageModifier;
+		private int _experience;
+		
+		public int Experience => _experience;
 
+		public WeaponStack(Weapon weapon, int experience): base(weapon) {
+			_experience = experience;
+		}
+
+		public void SetExperience(int experience) {
+			_experience = Mathf.Max(0, experience);
+		}
+		
 		public int GetDamage() {
-			return Mathf.RoundToInt(Item.Damage * _damageModifier);
+			return Item.GetUpgradeStage(_experience).Damage;
+		}
+		public int GetLevel() {
+			return Item.GetUpgradeStage(_experience).Level;
 		}
 	}
 }

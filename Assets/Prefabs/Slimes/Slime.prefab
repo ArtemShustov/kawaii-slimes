@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6402283512514051469}
   - component: {fileID: 1515269443808530339}
   - component: {fileID: 8839192127868196261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352ab70da79f4e6a8ecbba14eb6eddaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effect: {fileID: 11400000, guid: 34851a0c14724e6448f1fbffea6555b7, type: 2}
+  _character: {fileID: 5549367230527076559}
 --- !u!1 &2782557117695596227
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 5561635068637860998}
   - component: {fileID: 527580738438071493}
   - component: {fileID: 5965439498014467749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 5444878856278395595}
   - component: {fileID: 5400170625604230259}
   - component: {fileID: 5961363923981883497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,6 +246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d187315497c04df4b6767be95e0ed945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _effect: {fileID: 11400000, guid: 34851a0c14724e6448f1fbffea6555b7, type: 2}
+  _count: 1
+  _loot: {fileID: 11400000, guid: 5d81a99acb6173045b6623e0e711d9c7, type: 2}
+  _factory: {fileID: 11400000, guid: 992ec818db565ce4792f9df1a77c281b, type: 2}
   _input: {fileID: 5961363923981883497}
 --- !u!114 &2716494498400036173
 MonoBehaviour:
@@ -365,8 +369,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _input: {fileID: 9011347211912444906}
   _agent: {fileID: 5444878856278395595}
-  _targetIcon: {fileID: 2800000, guid: 44837f46c53a42246a6de7fa161e0d00, type: 3}
-  _iconSize: {x: 32, y: 32}
 --- !u!1 &8088705443824092266
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003716994079055281}
   - component: {fileID: 3565015574155668631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthBarRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 7450300081275831777, guid: 7eee11ab457ed974db49259571cfab22, type: 3}
       propertyPath: m_Name
       value: Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450300081275831777, guid: 7eee11ab457ed974db49259571cfab22, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7546893382179156511, guid: 7eee11ab457ed974db49259571cfab22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,9 +509,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6487889335743263875}
     m_Modifications:
+    - target: {fileID: 360071206739104057, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1297156390205202849, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
       propertyPath: m_Name
       value: Slime_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297156390205202849, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1822757671393000219, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -546,6 +560,30 @@ PrefabInstance:
     - target: {fileID: 1822757671393000219, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140001309317901962, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846592425453075544, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308202829825203286, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763336862518270604, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248456699007499857, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151879182690914171, guid: 9f1647a3f0ac04b4ebfab4a40b6147d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

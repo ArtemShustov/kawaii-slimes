@@ -3,7 +3,7 @@ using Game.Player;
 using UnityEngine;
 
 namespace Game.GameFlow.States {
-	public class FreeModeState: GameState {
+	public class FreeModeState: GameStateWithUI {
 		[SerializeField] private PlayerCharacter _player;
 		[SerializeField] private GameCamera _camera;
 
@@ -19,12 +19,14 @@ namespace Game.GameFlow.States {
 		}
 
 		public override void OnEnter() {
+			base.OnEnter();
 			_player.SetInputActive(true);
 			_camera.SetInputActive(true);
 			_camera.SetCursorLock(true);
 			ForeachChild((c) => c.gameObject.SetActive(true));
 		}
 		public override void OnExit() {
+			base.OnExit();
 			_player.SetInputActive(false);
 			_camera.SetInputActive(false);
 			_camera.SetCursorLock(false);
