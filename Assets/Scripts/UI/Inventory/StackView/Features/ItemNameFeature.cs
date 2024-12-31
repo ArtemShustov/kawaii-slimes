@@ -1,13 +1,13 @@
 using Core.Items;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 
 namespace Game.UI.Inventory.StackView.Features {
 	public class ItemNameFeature: ItemStackViewFeature {
-		[SerializeField] private TMP_Text _label;
+		[SerializeField] private LocalizeStringEvent _label;
 		
 		public override void Apply(AbstractItemStack itemStack) {
-			_label.text = itemStack.AbstractItem.Name;
+			_label.StringReference = itemStack.AbstractItem.Name;
 		}
 	}
 }

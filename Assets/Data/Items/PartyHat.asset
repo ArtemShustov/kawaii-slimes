@@ -12,7 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3544d502293c4434a1bf18dec76c0973, type: 3}
   m_Name: PartyHat
   m_EditorClassIdentifier: 
-  _name: Party hat
-  _description: No description
+  _name:
+    m_TableReference:
+      m_TableCollectionName: GUID:7c5beb191774f614e9e5c482842b4725
+    m_TableEntryReference:
+      m_KeyId: 20299528527872
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:a6481bda90f0edf40978d16027d1e2ee
+    m_TableEntryReference:
+      m_KeyId: 586052263936
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 21300000, guid: ee8ce5cd9c0883f4182b5cfd43cfd7fe, type: 3}
   _prefab: {fileID: 257226785423823269, guid: ecbbbd1d7f54b00468bcbb631523c067, type: 3}
+  references:
+    version: 2
+    RefIds: []

@@ -7,7 +7,7 @@ namespace Game {
 		[SerializeField] private int _experience;
 		[SerializeField] private Weapon _item;
 
-		private void Awake() {
+		private void Start() {
 			Spawn();
 			Destroy(this);
 		}

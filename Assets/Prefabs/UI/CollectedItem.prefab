@@ -117,8 +117,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43a3a15bd1e45c88a00f38d7f38fb5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pattern: '{1} of {0}'
-  _label: {fileID: 8286233360850876691}
+  _nameWithCount:
+    m_TableReference:
+      m_TableCollectionName: GUID:2a0cfb36bdd76054791303227934ef7f
+    m_TableEntryReference:
+      m_KeyId: 11558401859584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _label: {fileID: 9129795086213754532}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &-4520337904532527550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +154,7 @@ GameObject:
   - component: {fileID: 3094678306760927394}
   - component: {fileID: 5558186598589193190}
   - component: {fileID: 8286233360850876691}
+  - component: {fileID: 9129795086213754532}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -268,6 +280,60 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9129795086213754532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904096381872255595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:2a0cfb36bdd76054791303227934ef7f
+    m_TableEntryReference:
+      m_KeyId: 11558401859584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables:
+    - name: stackCount
+      variable:
+        rid: 5448655878380323188
+    - name: stackName
+      variable:
+        rid: 5448655878380323189
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8286233360850876691}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds:
+    - rid: 5448655878380323188
+      type: {class: IntVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: 0
+    - rid: 5448655878380323189
+      type: {class: StringVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
+      data:
+        m_Value: name
 --- !u!1 &7414499362907055048
 GameObject:
   m_ObjectHideFlags: 0

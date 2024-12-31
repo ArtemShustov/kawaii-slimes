@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75b59a503b14da4866789b33ac4c2bc, type: 3}
   m_Name: KatanaWeapon
   m_EditorClassIdentifier: 
-  _name: Katana
-  _description: Regular katana.
+  _name:
+    m_TableReference:
+      m_TableCollectionName: GUID:7c5beb191774f614e9e5c482842b4725
+    m_TableEntryReference:
+      m_KeyId: 85642436608
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:a6481bda90f0edf40978d16027d1e2ee
+    m_TableEntryReference:
+      m_KeyId: 7074734080
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 21300000, guid: 4de5e4f3717b2c548bd8b90b6c628b2f, type: 3}
   _upgradeLevels:
   - <Level>k__BackingField: 1
@@ -27,3 +43,6 @@ MonoBehaviour:
     <Damage>k__BackingField: 20
   _prefab: {fileID: 8040994826366151712, guid: 5cb75ac15704c2e4faa0cd647f652977, type: 3}
   _droppedPrefab: {fileID: 6392742892653781540, guid: 1c7fccc4509fb9942b78aef8e2f96dfd, type: 3}
+  references:
+    version: 2
+    RefIds: []

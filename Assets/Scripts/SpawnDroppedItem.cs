@@ -8,7 +8,7 @@ namespace Game {
 		[SerializeField] private int _count = 1;
 		[SerializeField] private Item _item;
 
-		private void Awake() {
+		private void Start() {
 			Spawn();
 			Destroy(this);
 		}
