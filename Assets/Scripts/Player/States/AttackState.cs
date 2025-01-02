@@ -1,17 +1,19 @@
 using Core.Character;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game.Player.States {
 	public class AttackState: CharacterState {
 		[Header("Settings")]
+		[SerializeField] private int _unarmedDamage = 1;
+		[SerializeField] private bool _hideWeapon = true;
 		[SerializeField] private string _attackTrigger = "Attack";
 		[SerializeField] private string _hasWeapon = "HasWeapon";
-		[SerializeField] private bool _hideWeapon = true;
 		[Header("Components")]
 		[SerializeField] private AttackAnimationCallback _callback;
 		[SerializeField] private AttackArea _unarmedArea;
 		[SerializeField] private AttackArea _armedArea;
-		[SerializeField] private WeaponSlot _weapon;
+		[SerializeField] private WeaponSlot _weaponSlot;
 		[Header("Transitions")]
 		[SerializeField] private AbstractCharacterState _idle;
 		[SerializeField] private AttackTransition _incoming;
@@ -25,8 +27,8 @@ namespace Game.Player.States {
 		public override AbstractTransition GetDefaultTransition() => _incoming;
 		
 		private void OnAttack() {
-			var area = _weapon.HasWeapon ? _armedArea : _unarmedArea;
-			area.Attack();
+			var area = _weaponSlot.HasWeapon ? _armedArea : _unarmedArea;
+			area.Attack(_weaponSlot.HasWeapon ? _weaponSlot.Weapon.GetDamage() : _unarmedDamage);
 		}
 		private void OnAnimationEnded() {
 			StateMachine.Change(_idle);
@@ -39,7 +41,7 @@ namespace Game.Player.States {
 			_outgoing.CheckAll();
 		}
 		public override void OnEnter() {
-			StateMachine.Animator.SetBool(_hasWeapon, _weapon.HasWeapon);
+			StateMachine.Animator.SetBool(_hasWeapon, _weaponSlot.HasWeapon);
 			
 			_outgoing.StartTracking();
 			
@@ -47,12 +49,12 @@ namespace Game.Player.States {
 			StateMachine.Animator.AnimatorMove += OnAnimatorMove;
 			StateMachine.Animator.AnimationEndedCallback += OnAnimationEnded;
 
-			_weapon.Show();
+			_weaponSlot.Show();
 			StateMachine.Animator.SetTrigger(_attackTrigger);
 		}
 		public override void OnExit() {
 			if (_hideWeapon) {
-				_weapon.Hide();
+				_weaponSlot.Hide();
 			}
 			
 			_callback.OnCallback -= OnAttack;

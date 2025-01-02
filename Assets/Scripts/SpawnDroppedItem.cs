@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Game {
 	public class SpawnDroppedItem: MonoBehaviour {
 		[SerializeField] private int _count = 1;
-		[SerializeField] private Item _item;
+		[SerializeField] private CountableItem _item;
 
 		private void Start() {
 			Spawn();

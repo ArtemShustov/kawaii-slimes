@@ -1,0 +1,112 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="ItemStackView" src="project://database/Assets/UI/Elements/ItemStackView.uxml?fileID=9197481963319205126&amp;guid=c917251cfd64db54b8d2ef10ffdcf556&amp;type=3#ItemStackView" />
+    <Style src="project://database/Assets/UI/Styles/WeaponForge.uss?fileID=7433441132597879392&amp;guid=7fd9653c754149b41a3713ed19311a2f&amp;type=3#WeaponForge" />
+    <engine:VisualElement name="Panel" class="panel" style="flex-grow: 1; background-color: rgba(32, 32, 32, 0.78);">
+        <engine:Label text="Weapon forge" name="Title" class="title" style="height: 15%; flex-shrink: 0;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:2a0cfb36bdd76054791303227934ef7f" entry="Id(357098905919488)" />
+            </Bindings>
+        </engine:Label>
+        <engine:VisualElement name="Container" style="flex-grow: 1; flex-direction: row;">
+            <engine:VisualElement name="Inventory" style="flex-grow: 0; flex-shrink: 0; width: 50%;">
+                <engine:ScrollView vertical-scroller-visibility="AlwaysVisible" horizontal-scroller-visibility="Hidden" style="flex-grow: 1; background-color: rgb(45, 45, 45); border-top-left-radius: 0; border-top-right-radius: 32px; border-bottom-right-radius: 32px; border-bottom-left-radius: 0; max-height: 80%;">
+                    <engine:VisualElement name="ItemsContainer" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;" />
+                </engine:ScrollView>
+            </engine:VisualElement>
+            <engine:VisualElement name="Item" data-source-type="Game.UI.Inventory.Modern.UpgradeWeaponViewModel, Assembly-CSharp" style="flex-grow: 1; flex-shrink: 0; margin-left: 40px; width: auto;">
+                <engine:VisualElement name="Header" style="flex-grow: 0; height: auto; flex-shrink: 1; flex-direction: row;">
+                    <engine:VisualElement style="flex-grow: 0; width: auto; flex-shrink: 0;">
+                        <engine:VisualElement class="element" style="flex-grow: 0; width: 256px; height: 256px; flex-shrink: 0;">
+                            <engine:VisualElement name="ItemIcon" style="flex-grow: 1; flex-shrink: 1; background-image: url(&quot;project://database/Packages/com.unity.probuilder/Content/Icons/UVEditor/camera-64x64.png?fileID=2800000&amp;guid=90f8fdd975ce6b74f9ff13d9672b45eb&amp;type=3#camera-64x64&quot;); -unity-background-image-tint-color: rgb(255, 255, 255);">
+                                <Bindings>
+                                    <engine:DataBinding property="style.backgroundImage" data-source-path="Icon" binding-mode="ToTarget" />
+                                </Bindings>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        <engine:VisualElement name="ItemLvl" class="element" style="flex-grow: 0; width: 256px; flex-shrink: 0; flex-direction: row; margin-top: 10px; height: 64px;">
+                            <engine:Label text="LVL: " name="ItemLvlLabel" class="text" style="-unity-text-align: middle-left; flex-grow: 1;">
+                                <Bindings>
+                                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:2a0cfb36bdd76054791303227934ef7f" entry="Id(357297502019584)" />
+                                </Bindings>
+                            </engine:Label>
+                            <engine:Label text="10/60" name="ItemLvlValue" class="text" style="-unity-text-align: middle-right; flex-grow: 1;">
+                                <Bindings>
+                                    <engine:DataBinding property="text" data-source-path="LvlWithMax" binding-mode="ToTarget" />
+                                </Bindings>
+                            </engine:Label>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement style="flex-grow: 1; margin-left: 20px; padding-left: 0;">
+                        <engine:Label text="Weapon name" name="ItemName" class="weapon-name" style="flex-grow: 0; height: auto; width: auto;">
+                            <Bindings>
+                                <engine:DataBinding property="text" data-source-path="Name" binding-mode="ToTarget" />
+                            </Bindings>
+                        </engine:Label>
+                        <engine:Label text="Item description" name="ItemDescription" class="weapon-description" style="flex-grow: 1; flex-shrink: 1; white-space: normal; height: 128px; text-overflow: ellipsis; overflow: hidden; width: 512px;">
+                            <Bindings>
+                                <engine:DataBinding property="text" data-source-path="Description" binding-mode="ToTarget" />
+                            </Bindings>
+                        </engine:Label>
+                        <engine:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; margin-bottom: 0; margin-top: 10px; bottom: 0;">
+                            <engine:VisualElement name="ItemDmg" class="element" style="flex-grow: 0; width: 512px; flex-shrink: 0; flex-direction: row; height: 64px;">
+                                <engine:Label text="Damage:" name="ItemDmgLabel" class="text" style="-unity-text-align: middle-left; flex-grow: 1;">
+                                    <Bindings>
+                                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:2a0cfb36bdd76054791303227934ef7f" entry="Id(357169693188096)" />
+                                    </Bindings>
+                                </engine:Label>
+                                <engine:Label text="1.234.567.890" name="ItemDmgValue" class="text" style="-unity-text-align: middle-right; flex-grow: 1;">
+                                    <Bindings>
+                                        <engine:DataBinding property="text" data-source-path="Damage" binding-mode="ToTarget" />
+                                    </Bindings>
+                                </engine:Label>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement name="UpgradeContainer" style="flex-grow: 1; margin-top: 50px; width: 788px;">
+                    <engine:VisualElement style="flex-grow: 0; flex-shrink: 0; flex-direction: row; justify-content: center;">
+                        <engine:Instance template="ItemStackView" name="RequiredItem" />
+                    </engine:VisualElement>
+                    <engine:VisualElement name="ExpSliderRoot" style="flex-grow: 0; flex-direction: row; flex-shrink: 0; margin-bottom: 0; margin-top: 10px; bottom: 0; justify-content: center;">
+                        <Game.UI.Elements.CommandButton text="-" command="SliderDecrease" class="text element button" style="width: 64px; height: 64px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                        <engine:SliderInt value="10" high-value="30" low-value="0" class="element" style="width: 512px; height: 64px; margin-top: 0; margin-right: 10px; margin-bottom: 0; margin-left: 10px; overflow: hidden;">
+                            <Bindings>
+                                <engine:DataBinding property="highValue" data-source-path="SliderMax" binding-mode="ToTarget" />
+                                <engine:DataBinding property="lowValue" data-source-path="SliderMin" binding-mode="ToTarget" />
+                                <engine:DataBinding property="value" data-source-path="SliderValue" binding-mode="ToTarget" />
+                            </Bindings>
+                        </engine:SliderInt>
+                        <Game.UI.Elements.CommandButton text="+" command="SliderIncrease" class="text element button" style="width: 64px; height: 64px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                        <engine:VisualElement name="Value" class="element" style="flex-grow: 0; width: 128px; flex-shrink: 0; flex-direction: row; margin-top: 0; height: 64px;">
+                            <engine:Label text="1000" class="text" style="-unity-text-align: middle-center; flex-grow: 1;">
+                                <Bindings>
+                                    <engine:DataBinding property="text" data-source-path="SliderValue" binding-mode="ToTarget" />
+                                </Bindings>
+                            </engine:Label>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement style="flex-grow: 0; flex-direction: row; flex-shrink: 0; margin-bottom: 0; margin-top: 10px; bottom: 0; justify-content: center;">
+                        <Game.UI.Elements.CommandButton text="Button label" command="UpgradeWeapon" name="UpgradeButton" class="text element button" style="width: 256px; height: 64px; margin-top: 0; margin-right: 20px; margin-bottom: 0; margin-left: 0;">
+                            <Bindings>
+                                <UnityEngine.Localization.LocalizedString property="text" table="GUID:2a0cfb36bdd76054791303227934ef7f" entry="Id(357353537921024)" />
+                                <engine:DataBinding property="enabledSelf" data-source-path="CanUpgrade" binding-mode="ToTarget" />
+                            </Bindings>
+                        </Game.UI.Elements.CommandButton>
+                        <engine:VisualElement name="ItemExp" class="element" style="flex-grow: 0; width: 512px; flex-shrink: 0; flex-direction: row; margin-top: 0; height: 64px;">
+                            <engine:Label text="EXP:" name="ItemExpLabel" class="text" style="-unity-text-align: middle-left; flex-grow: 1;">
+                                <Bindings>
+                                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:2a0cfb36bdd76054791303227934ef7f" entry="Id(357238844678144)" />
+                                </Bindings>
+                            </engine:Label>
+                            <engine:Label text="10/60" name="ItemExpValue" class="text" style="-unity-text-align: middle-right; flex-grow: 1;">
+                                <Bindings>
+                                    <engine:DataBinding property="text" data-source-path="ExpWithMax" binding-mode="ToTarget" />
+                                </Bindings>
+                            </engine:Label>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

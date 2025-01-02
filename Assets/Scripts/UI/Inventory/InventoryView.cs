@@ -4,7 +4,7 @@ using Game.UI.Inventory.StackView;
 using UnityEngine;
 
 namespace Game.UI.Inventory {
-	public class InventoryView: PlayerInventoryComponent {
+	public class InventoryView: MonoBehaviour, IPlayerInventoryComponent {
 		[Header("Settings")]
 		[SerializeField] private bool _showOnEnable = true;
 		[SerializeField] private ItemStackView _stackViewPrefab;
@@ -17,7 +17,7 @@ namespace Game.UI.Inventory {
 			Func<AbstractItemStack, bool> filter = _filter ? _filter.Check : (stack) => true;
 			Show(filter);
 		}
-		public void Show(Func<AbstractItemStack, bool> filter) {
+		private void Show(Func<AbstractItemStack, bool> filter) {
 			Clear();
 			if (_inventory == null) {
 				return;
@@ -36,8 +36,7 @@ namespace Game.UI.Inventory {
 			}
 		}
 
-		public override void Bind(PlayerInventoryViewModel viewModel) {
-			base.Bind(viewModel);
+		public void Bind(PlayerInventoryViewModel viewModel) {
 			_inventory = viewModel.Inventory;
 		}
 

@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c54ce332c744d296e69e13abda6ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
   _self: {fileID: -6353607457482830310}
   _collider: {fileID: 9111360378584517246}
   _source: {fileID: 3441587910053405426}
@@ -214,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c54ce332c744d296e69e13abda6ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
   _self: {fileID: -6353607457482830310}
   _collider: {fileID: 8305918317844752679}
   _source: {fileID: 1938772656495609442}
@@ -392,7 +390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraTarget: {fileID: 2645516100282096194}
   _input: {fileID: 4205557027512406189}
-  _hatSlot: {fileID: 0}
   _weaponSlot: {fileID: 483329301985427423}
 --- !u!114 &6854079894947973165
 MonoBehaviour:
@@ -569,7 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac7e51f453e4975a057f667dbfbdb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _swordArea: {fileID: 1810369061334485913}
   _hand: {fileID: 331040627455982502}
   _weapon:
     <Item>k__BackingField: {fileID: 0}
@@ -672,13 +668,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d3494f05864e7fb45dde7fc4142edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unarmedDamage: 1
+  _hideWeapon: 0
   _attackTrigger: Attack
   _hasWeapon: HasWeapon
-  _hideWeapon: 0
   _callback: {fileID: 5183122409515172658}
   _unarmedArea: {fileID: 6017648290698859450}
   _armedArea: {fileID: 1810369061334485913}
-  _weapon: {fileID: 483329301985427423}
+  _weaponSlot: {fileID: 483329301985427423}
   _idle: {fileID: 2459574984160317366}
   _incoming:
     _state: {fileID: 5228736775838443508}

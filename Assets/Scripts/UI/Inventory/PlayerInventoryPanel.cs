@@ -1,18 +1,12 @@
-using Core.MVVM;
 using Core.UI.Panels;
-using Game.Items;
-using UnityEngine;
 
 namespace Game.UI.Inventory {
-	public class PlayerInventoryPanel: UIPanel, IView<PlayerInventoryViewModel> {
-		private PlayerInventoryViewModel _viewModel;
-		
-		public void Bind(PlayerInventoryViewModel viewModel) {
-			_viewModel = viewModel;
+	public class PlayerInventoryPanel: UIPanel<PlayerInventoryViewModel> {
+		public override void Bind(PlayerInventoryViewModel viewModel) {
+			base.Bind(viewModel);
 
-			var components = GetComponentsInChildren<PlayerInventoryComponent>(true);
-			foreach (var component in components) {
-				component.Bind(_viewModel);
+			foreach (var component in GetComponentsInChildren<IPlayerInventoryComponent>(true)) {
+				component.Bind(viewModel);
 			}
 		}
 	}

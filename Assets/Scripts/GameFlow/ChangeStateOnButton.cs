@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace Game.GameFlow {
 	public class ChangeStateOnButton: MonoBehaviour {
-		[SerializeField] private GameState _state;
-		[SerializeField] private GameStateMachine _machine;
+		[SerializeField] private WorldState _state;
+		[SerializeField] private WorldStateMachine _machine;
 		[SerializeField] private InputAction _button = new InputAction(
 			name: "Button",
 			type: InputActionType.Button

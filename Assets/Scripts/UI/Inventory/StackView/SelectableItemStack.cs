@@ -13,7 +13,7 @@ namespace Game.UI.Inventory.StackView {
 		}
 
 		private void OnButtonCLick() {
-			EventBus<ItemSelectedEvent>.Raise(new ItemSelectedEvent(_stackView));
+			EventBus<ItemViewSelectedEvent>.Raise(new ItemViewSelectedEvent(_stackView));
 		}
 		private void OnEnable() {
 			_button.onClick.AddListener(OnButtonCLick);

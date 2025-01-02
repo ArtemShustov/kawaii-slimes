@@ -1,15 +1,14 @@
 using System;
-using Core.Items;
 using UnityEngine;
 
 namespace Core.Items {
 	[Serializable]
-	public class CountableItemStack: ItemStack<Item>, ICountableStack {
+	public class CountableItemStack: ItemStack<CountableItem> {
 		[SerializeField] private int _count;
 
 		public int Count => _count;
 		
-		public CountableItemStack(Item item, int count = 1): base(item) {
+		public CountableItemStack(CountableItem item, int count = 1): base(item) {
 			_count = count;
 		}
 

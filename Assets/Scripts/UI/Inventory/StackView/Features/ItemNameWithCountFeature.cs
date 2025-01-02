@@ -12,7 +12,7 @@ namespace Game.UI.Inventory.StackView.Features {
 		[SerializeField] private LocalizeStringEvent _label;
 		
 		public override void Apply(AbstractItemStack itemStack) {
-			if (itemStack is ICountableStack countableStack) {
+			if (itemStack is CountableItemStack countableStack) {
 				var stackCount = countableStack.Count;
 				var itemName = itemStack.AbstractItem.Name.GetLocalizedString();
 				SetNameWithCount(stackCount, itemName);

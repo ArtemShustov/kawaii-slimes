@@ -9,22 +9,44 @@ namespace Core.Items {
 		public IReadOnlyList<AbstractItemStack> Items => _items;
 		
 		public void Add(AbstractItemStack stack) {
-			if (stack is ICountableStack countableStack && countableStack.Count <= 0) {
-				return;
-			}
-			if (stack is ICountableStack newStack && TryGetCountableStackOf(stack.AbstractItem, out var existingStack)) {
-				existingStack.SetCount(existingStack.Count + newStack.Count);
-				return;
+			if (stack is CountableItemStack countableStack) {
+				if (countableStack.Count <= 0) {
+					return;
+				}
+				if (TryGetCountableStackOf(countableStack.Item, out var existingStack)) {
+					existingStack.SetCount(existingStack.Count + countableStack.Count);
+					return;
+				}
 			}
 			_items.Add(stack);
 		}
-
-		private bool TryGetCountableStackOf(Item item, out ICountableStack existingStack) {
-			if (TryGetStackOf(item, out var stack) && stack is ICountableStack countableStack) {
-				existingStack = countableStack;
+		public bool CanTake(CountableItem item, int count) {
+			if (TryGetCountableStackOf(item, out var stack)) {
+				return stack.Count >= count;
+			}
+			return false;
+		}
+		public bool Take(CountableItem item, int count) {
+			count = Mathf.Abs(count);
+			if (TryGetCountableStackOf(item, out var stack) && stack.Count >= count) {
+				stack.SetCount(stack.Count - count);
+				if (stack.Count == 0) {
+					_items.Remove(stack);
+				}
 				return true;
 			}
-			existingStack = null;
+			return false;
+		}
+		public int GetCountOf(CountableItem item) {
+			return TryGetCountableStackOf(item, out var stack) ? stack.Count : 0;
+		}
+
+		public bool TryGetCountableStackOf(CountableItem item, out CountableItemStack result) {
+			if (TryGetStackOf(item, out var stack) && stack is CountableItemStack countableStack) {
+				result = countableStack;
+				return true;
+			}
+			result = null;
 			return false;
 		}
 		private bool TryGetStackOf(Item item, out AbstractItemStack stack) {

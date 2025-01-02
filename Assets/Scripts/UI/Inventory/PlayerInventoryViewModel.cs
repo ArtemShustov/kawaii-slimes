@@ -1,21 +1,22 @@
+using Core.Items;
 using Core.MVVM;
 using Game.Items;
 using Game.Player;
 
 namespace Game.UI.Inventory {
 	public class PlayerInventoryViewModel: IViewModel {
-		public PlayerCharacter Character { get; private set; }
-		public Core.Items.Inventory Inventory { get; private set; }
+		public PlayerCharacter Player { get; private set; }
+		public PlayerInventory Inventory { get; private set; }
 
-		public WeaponStack Weapon => Character.WeaponSlot.Weapon;
+		public WeaponStack PlayerWeapon => Player.WeaponSlot.Weapon;
 		
-		public PlayerInventoryViewModel(PlayerCharacter character, Core.Items.Inventory inventory) {
-			Character = character;
+		public PlayerInventoryViewModel(PlayerCharacter player, PlayerInventory inventory) {
+			Player = player;
 			Inventory = inventory;
 		}
 
 		public void EquipWeapon(WeaponStack stack) {
-			Character.WeaponSlot.SetWeapon(stack);
+			Player.WeaponSlot.SetWeapon(stack);
 		}
 	}
 }

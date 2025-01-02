@@ -35,6 +35,30 @@ MonoBehaviour:
     m_Key: StackView_NameWithCount
     m_Metadata:
       m_Items: []
+  - m_Id: 357098905919488
+    m_Key: WeaponForge_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357169693188096
+    m_Key: WeaponForge_Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357238844678144
+    m_Key: WeaponForge_Exp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357297502019584
+    m_Key: WeaponForge_Lvl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357353537921024
+    m_Key: WeaponForge_UpgradeButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642401277304832
+    m_Key: Inventory_Title
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

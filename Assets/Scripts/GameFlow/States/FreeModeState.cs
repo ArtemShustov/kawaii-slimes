@@ -1,12 +1,8 @@
 using System;
-using Game.Player;
 using UnityEngine;
 
 namespace Game.GameFlow.States {
-	public class FreeModeState: GameStateWithUI {
-		[SerializeField] private PlayerCharacter _player;
-		[SerializeField] private GameCamera _camera;
-
+	public class FreeModeState: WorldStateWithUI {
 		private void Awake() {
 			ForeachChild((c) => c.gameObject.SetActive(false));
 		}
@@ -20,16 +16,16 @@ namespace Game.GameFlow.States {
 
 		public override void OnEnter() {
 			base.OnEnter();
-			_player.SetInputActive(true);
-			_camera.SetInputActive(true);
-			_camera.SetCursorLock(true);
+			StateMachine.Player.SetInputActive(true);
+			StateMachine.Camera.SetInputActive(true);
+			StateMachine.Camera.SetCursorLock(true);
 			ForeachChild((c) => c.gameObject.SetActive(true));
 		}
 		public override void OnExit() {
 			base.OnExit();
-			_player.SetInputActive(false);
-			_camera.SetInputActive(false);
-			_camera.SetCursorLock(false);
+			StateMachine.Player.SetInputActive(false);
+			StateMachine.Camera.SetInputActive(false);
+			StateMachine.Camera.SetCursorLock(false);
 			ForeachChild((c) => c.gameObject.SetActive(false));
 		}
 	}

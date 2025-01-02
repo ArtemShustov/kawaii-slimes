@@ -14,5 +14,8 @@ namespace Game.UI.Inventory.StackView {
 				feature.Apply(_itemStack);
 			}
 		}
+		public void UpdateView() {
+			SetStack(_itemStack);
+		}
 	}
 }

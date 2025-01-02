@@ -40,6 +40,30 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 5448655878380323186
+  - m_Id: 357098905919488
+    m_Localized: Weapon forge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357169693188096
+    m_Localized: 'Damage:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357238844678144
+    m_Localized: 'EXP:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357297502019584
+    m_Localized: 'LVL:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357353537921024
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642401277304832
+    m_Localized: Inventory
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

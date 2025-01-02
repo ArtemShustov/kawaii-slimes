@@ -1,13 +1,10 @@
 using System;
 using Game.Accessories;
 using Game.Items;
-using Game.Player.States;
-using NUnit.Framework;
 using UnityEngine;
 
 namespace Game.Player {
 	public class WeaponSlot: MonoBehaviour {
-		[SerializeField] private AttackArea _swordArea;
 		[SerializeField] private HandSlot _hand;
 		[Space]
 		[SerializeField] private WeaponStack _weapon;
@@ -25,9 +22,6 @@ namespace Game.Player {
 
 		public void SetWeapon(WeaponStack weapon) {
 			_weapon = weapon;
-			if (HasWeapon) {
-				_swordArea.SetDamage(_weapon.GetDamage());
-			}
 			WeaponChanged?.Invoke();
 		}
 

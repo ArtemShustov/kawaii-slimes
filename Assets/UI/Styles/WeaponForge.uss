@@ -1,0 +1,123 @@
+.aspect-ratio-element {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+
+.item-stack {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 144px;
+}
+
+.item-stack .item-stack__label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    min-width: 110px;
+    max-width: 110px;
+    height: 36px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+    width: 110px;
+}
+
+.title {
+    -unity-font-style: bold;
+    font-size: 100px;
+    -unity-text-align: upper-center;
+    color: rgb(255, 255, 255);
+}
+
+.weapon-name {
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    -unity-text-align: upper-left;
+}
+
+.weapon-description {
+    font-size: 32px;
+    color: rgb(222, 222, 222);
+    text-overflow: ellipsis;
+}
+
+.text {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    -unity-font-style: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.unity-scroll-view__content-and-vertical-scroll-container {
+    flex-direction: row-reverse;
+}
+
+.element {
+    background-color: rgb(45, 45, 45);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.button:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+.button:active {
+    background-color: rgb(93, 93, 93);
+}
+
+.button:focus {
+    border-left-color: rgb(255, 255, 0);
+    border-right-color: rgb(255, 255, 0);
+    border-top-color: rgb(255, 255, 0);
+    border-bottom-color: rgb(255, 255, 0);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.unity-base-slider .unity-base-slider__tracker {
+    height: 30%;
+    width: 100%;
+    margin-top: -9px;
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.unity-base-slider .unity-base-slider__dragger {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgb(76, 76, 76);
+    border-right-color: rgb(76, 76, 76);
+    border-top-color: rgb(76, 76, 76);
+    border-bottom-color: rgb(76, 76, 76);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-width: 8px;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 8px;
+}
